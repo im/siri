@@ -26,6 +26,7 @@ export default function OpenUrl(cli: Cli) {
 
 	shell.exec('git add .')
 	shell.exec(`git commit -m "commit at ${message}"`)
+	shell.exec(`git pull`)
 	shell.exec(`git push`)
 
     return (
