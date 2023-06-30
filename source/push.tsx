@@ -21,13 +21,15 @@ function formatDate (date?: any) {
 
 export default function OpenUrl(cli: Cli) {
     const {  flags } = cli
+
+	const message = formatDate(new Date())
 	console.log('flags: ', flags);
 
 	shell.exec('git add .')
 
-	shell.exec(`git commit -m "commit at ${formatDate(new Date())}"`)
+	shell.exec(`git commit -m "commit at ${message}"`)
 
-	shell.exec(`git push origin main`)
+	shell.exec(`git push`)
 
 
     return (
