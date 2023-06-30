@@ -29,7 +29,7 @@ export default function OpenUrl(cli: Cli) {
 	shell.exec(`git push`)
 
     return (
-        <Box >
+        <Box width={60}>
 			<Alert variant="success"> message : { message } </Alert>
         </Box>
     );
