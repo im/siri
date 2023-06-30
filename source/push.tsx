@@ -1,9 +1,9 @@
 import React from 'react';
 import {  Box } from 'ink';
-import { Config, Cli } from './types.js'
+import {  Cli } from './types.js'
 // @ts-ignore
 import shell from 'shelljs'
-// import { Alert, } from '@inkjs/ui';
+import { Alert, } from '@inkjs/ui';
 
 function formatDate (date?: any) {
     const options = {
@@ -22,18 +22,15 @@ function formatDate (date?: any) {
 export default function OpenUrl(cli: Cli) {
     const {  flags } = cli
 
-	const message = formatDate(new Date())
-	console.log('flags: ', flags);
+	const message = flags.m ? flags.m : formatDate(new Date())
 
 	shell.exec('git add .')
-
 	shell.exec(`git commit -m "commit at ${message}"`)
-
 	shell.exec(`git push`)
-
 
     return (
         <Box >
+			<Alert variant="success"> message : { message } </Alert>
         </Box>
     );
 }
