@@ -3,6 +3,7 @@
 	"version": "0.0.1",
 	"license": "MIT",
 	"author": "tangxiaomi <81195314@qq.com>",
+	"private": false,
 	"bin": {
 		"siri": "dist/cli.js"
 	},
