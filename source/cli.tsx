@@ -4,7 +4,7 @@ import { render } from 'ink';
 import meow from 'meow';
 import App from './app.js';
 
-const cli = meow(
+const cli:any = meow(
     `
 	Usage
 	  $ siri
@@ -19,7 +19,7 @@ const cli = meow(
     {
         importMeta: import.meta,
         flags: {
-            name: {
+            m: {
                 type: 'string',
             },
         },

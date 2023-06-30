@@ -1,6 +1,9 @@
 export type Cli = {
 	input: Array<any>
-	flags: Object
+	flags: {
+		m: string,
+		[x: string]: string
+	}
 }
 
 export  type Props = {
