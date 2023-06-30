@@ -1,0 +1,6 @@
+.eslintrc.js
+tests
+docs/
+.github
+node_modules/
+.npmrc
