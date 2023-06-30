@@ -1,13 +1,11 @@
 {
-	"name": "@tangxiaomi/siri",
-	"version": "0.0.1",
+	"name": "siri-cmd",
+	"version": "0.0.3",
 	"license": "MIT",
-	"author": "tangxiaomi <81195314@qq.com>",
-	"private": false,
+	"type": "module",
 	"bin": {
 		"siri": "dist/cli.js"
 	},
-	"type": "module",
 	"engines": {
 		"node": ">=16"
 	},
@@ -25,8 +23,9 @@
 		"react": "^18.2.0"
 	},
 	"devDependencies": {
-		"@tangxiaomi/eslint-config": "0.0.3",
 		"@sindresorhus/tsconfig": "^3.0.1",
+		"@types/fs-extra": "^11.0.1",
+		"@types/node": "^20.3.2",
 		"@types/react": "^18.0.32",
 		"@vdemedes/prettier-config": "^2.0.1",
 		"ava": "^5.2.0",
@@ -34,6 +33,7 @@
 		"eslint-config-xo-react": "^0.27.0",
 		"eslint-plugin-react": "^7.32.2",
 		"eslint-plugin-react-hooks": "^4.6.0",
+		"fs-extra": "^11.1.1",
 		"ink-testing-library": "^3.0.0",
 		"prettier": "^2.8.7",
 		"ts-node": "^10.9.1",

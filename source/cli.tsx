@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 import React from 'react';
-import {render} from 'ink';
+import { render } from 'ink';
 import meow from 'meow';
 import App from './app.js';
 
 const cli = meow(
-	`
+    `
 	Usage
 	  $ siri
 
@@ -13,16 +13,18 @@ const cli = meow(
 		--name  Your name
 
 	Examples
-	  $ siri --name=Jane
-	  Hello, Jane
+	  $ siri demo
+	  打开 demo:  https://github.com/im/siri
 `,
-	{
-		importMeta: import.meta,
-		flags: {
-			name: {
-				type: 'string',
-			},
-		},
-	},
+    {
+        importMeta: import.meta,
+        flags: {
+            name: {
+                type: 'string',
+            },
+        },
+    },
 );
-render(<App name={cli.flags.name} />);
+
+// render(<App name={cli.flags.name} />);
+render(<App cli={cli} />);

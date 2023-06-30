@@ -1,14 +1,20 @@
 import React from 'react';
 import {Text} from 'ink';
+import OpenUrl from './openUrl.js';
+import { getConfig } from './config.js'
+import { Props } from './types.js'
 
-type Props = {
-	name: string | undefined;
-};
+export default function App({cli}: Props) {
+	const { input  } = cli
+	const config = getConfig()
 
-export default function App({name = 'Stranger'}: Props) {
+	if (input.length) {
+		return OpenUrl(cli, config)
+	}
+
 	return (
 		<Text>
-			Hello, <Text color="green">{name}</Text>
+			Hello,
 		</Text>
 	);
 }
